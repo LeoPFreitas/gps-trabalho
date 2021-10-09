@@ -1,0 +1,71 @@
+openapi: "3.0.3"
+info:
+  title: "gps_trabalho API"
+  description: "gps_trabalho API"
+  version: "1.0.0"
+servers:
+  - url: "https://gps_trabalho"
+paths:
+  /ap1/v1/imovel/create:
+    post:
+      summary: "POST ap1/v1/imovel/create"
+      operationId: "createImovel"
+      responses:
+        "200":
+          description: "OK"
+  /ap1/v1/imovel/delete/{id}:
+    delete:
+      summary: "DELETE ap1/v1/imovel/delete/{id}"
+      operationId: "delete"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int32"
+      responses:
+        "200":
+          description: "OK"
+  /ap1/v1/imovel/findall:
+    get:
+      summary: "GET ap1/v1/imovel/findall"
+      operationId: "findAll"
+      responses:
+        "200":
+          description: "OK"
+  /ap1/v1/imovel/update:
+    put:
+      summary: "PUT ap1/v1/imovel/update"
+      operationId: "update"
+      responses:
+        "200":
+          description: "OK"
+  /ap1/v1/user/authenticate:
+    post:
+      summary: "POST ap1/v1/user/authenticate"
+      operationId: "login"
+      responses:
+        "200":
+          description: "OK"
+  /ap1/v1/user/create:
+    post:
+      summary: "POST ap1/v1/user/create"
+      operationId: "createUser"
+      responses:
+        "200":
+          description: "OK"
+  /ap1/v1/user/findAllImoveis:
+    get:
+      summary: "GET ap1/v1/user/findAllImoveis"
+      operationId: "findAllImoveis"
+      responses:
+        "200":
+          description: "OK"
+  /ap1/v1/user/findUserByEmail:
+    get:
+      summary: "GET ap1/v1/user/findUserByEmail"
+      operationId: "findUserByEmail"
+      responses:
+        "200":
+          description: "OK"
